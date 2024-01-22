@@ -1,0 +1,173 @@
+/*=============== START VARIABLES ===============*/
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-background: #f6f6f6;
+    --section-padding: 60px;
+    --main-duration: 0.5s;
+}
+/*=============== START VARIABLES ===============*/
+
+/*=============== START GLOBAL RULES ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*========== SMALL ==========*/
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/*========== MEDIUM ==========*/
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/*========== LARGE ==========*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/*=============== START COMPONENTS ===============*/
+
+/*=============== END COMPONENTS ===============*/
+
+/*=============== END GLOBAL RULES ===============*/
+
+/*=============== START HEADER ===============*/
+header {
+    padding: 20px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    width: 70px;
+}
+header .links {
+    position: relative;
+}
+header .links:hover  ul {
+    display: block;
+}
+header .links .icon {
+    width: 30px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+header .links .icon:hover span:nth-child(2) {
+    width: 100%;
+}
+header .links .icon span {
+    height: 2px;
+    background-color: black;
+    margin-bottom: 5px;
+}
+header .links .icon span:first-child {
+    width: 100%;
+}
+header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: var(--main-duration);
+}
+header .links .icon span:last-child {
+    width: 100%;
+}
+header .links ul {
+    min-width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #eee;
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+    display: none;
+    z-index: 1;
+}
+header .links ul::before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+    top: -20px;
+    right: 5px;
+}
+header .links ul li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    transition: var(--main-duration);
+}
+header .links ul li a:hover {
+    padding-left: 15px;
+    background-color: #ddd;
+}
+header .links ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+/*=============== END HEADER ===============*/
+
+
+/*=============== START LANDING ===============*/
+.landing {
+    position: relative;
+    height: calc( 100vh - 68px);
+    background-image: url(./images/landing.jpg);
+    background-size: cover;
+}
+.landing .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+.landing .text h1 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 900;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.landing .text p {
+    line-height: 2;
+    font-size: 19px;
+}
+/*=============== END LANDING ===============*/
+/*===============  ===============*/
+/*===============  ===============*/
+/*===============  ===============*/
+/*===============  ===============*/
+/*===============  ===============*/
+/*===============  ===============*/
